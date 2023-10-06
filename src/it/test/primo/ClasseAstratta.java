@@ -3,7 +3,9 @@ package it.test.primo;
 public abstract class ClasseAstratta {//Errore: The class ClasseAstratta can be either abstract or final, not both
 
 	private String primaVariabileClasseAstratta;
-	private String secondaVariabileClasseAstratta;
+	public String secondaVariabilePublicClasseAstratta = ""
+			+ "Non possono essere istanziate (Errore: Cannot instantiate the type ClasseAstratta),\"\r\n"
+			+ "non possono essere \"final\" (Errore: The class ClasseAstratta can be either abstract or final, not both).\n";
 
 	public ClasseAstratta(String primaVariabileClasseAstratta) {
 		this.primaVariabileClasseAstratta = primaVariabileClasseAstratta;
@@ -26,7 +28,7 @@ public abstract class ClasseAstratta {//Errore: The class ClasseAstratta can be 
 //	}
 
 	public void metodoClasseAstratta() {
-		System.out.println("test metodoClasseAstratta(): Ok !");
+		System.out.println("test metodoClasseAstratta(): Ok !" + "\nLe classi astratte sono utilizzate per poter dichiarare caratteristiche comuni fra classi.");
 	}
 	
 	public abstract void metodoAstrattoClasseAstratta(String primaVariabileClasseAstratta)/*{...}*/;
